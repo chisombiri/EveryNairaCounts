@@ -1,232 +1,221 @@
-:root {
-    --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25); 
+* {
+  box-sizing: border-box;
 }
 
-*{
-    box-sizing: border-box;
+body {
+  background-color: #003552;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
 }
 
-body{
-    background-color: #003552;
-    color: #ffffff;
-    font-family: 'Manrope', sans-serif;
-    margin: 0;
+.main {
+  flex-grow: 0.4;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 8px;
+  margin: 40px 0 8px;
+}
+
+h3, h4, label {
+  letter-spacing: 1.5px;
+}
+
+.mobile-info {
+  opacity: 0;
+  font-weight: lighter;
+}
+
+.naira {
+  color: #2ecc71;
+}
+
+h4 {
+  color: #ffffff;
+  font-weight: bolde;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.container1 > h4 {
+  color: #ffffff;
+}
+
+.budg-container {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  background-color: rgba(22, 147, 219, 0.1843137255);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  margin: 16px 0;
+}
+.budg-container div {
+  flex: 1;
+  text-align: center;
+}
+.budg-container div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.container2 {
+  width: 360px;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 6px 0;
+}
+
+.money.income {
+  color: #2eec7d;
+}
+
+.money.expense {
+  color: #c02c1b;
+}
+
+.form-control {
+  margin: 16px 0;
+}
+
+.label-income {
+  color: #2ecc71;
+}
+
+.label-expense {
+  color: #c0392b;
+}
+
+input {
+  display: block;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: solid 1px #dedede;
+  padding: 8px;
+  width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus, .btn:focus, .delete-btn:focus {
+  outline: none;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #0B6496;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25);
+  display: block;
+  border: 0;
+  font-size: 1rem;
+  margin: 24px 0 32px;
+  padding: 10px 24px;
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.hist {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+}
+.hist li {
+  border-radius: 8px;
+  color: #0B6496;
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25);
+  justify-content: space-between;
+  position: relative;
+  padding: 8px;
+  margin: 8px 0;
+}
+.hist li.income {
+  border-right: 6px solid #2ecc71;
+}
+.hist li.expense {
+  border-right: 6px solid #c0392b;
+}
+.hist li:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  padding: 6px 6px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+@media (max-width: 600px) {
+  body {
     display: flex;
-    justify-content: space-around;
+    flex-flow: column;
+    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
+    padding: 24px;
+  }
 
-.main{
-    flex-grow: 0.4;
-}
-
-h1{
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-h3{
-    border-bottom: 1px solid #bbb;
-    padding-bottom: 8px;
-    margin: 40px 0 8px;
-}
-
-h3, h4, label{
-    letter-spacing: 1.5px;
-}
-
-.mobile-info{
-    opacity: 0;
-    font-weight: lighter;
-}
-
-.naira{
-    color: #2ecc71;
-}
-
-h4{
-    color: #ffffff;
-    font-weight: bolde;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.container1 > h4{
-    color: #ffffff;
-}
-
-.budg-container{
-    box-shadow: var(--box-shadow);
-    border-radius: 16px;
-    background-color: #1693db2f;
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-    margin: 16px 0;
-}
-
-.budg-container > div{
-    flex: 1;
-    text-align: center;
-}
-
-.budg-container > div:first-of-type{
-    border-right: 1px solid #dedede;
-}
-
-.container2{
+  .main {
+    padding-top: 16px;
     width: 360px;
-}
+    flex-grow: 0;
+  }
 
-.money{
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin: 6px 0;
-}
-
-.money.income{
-    color: #2eec7d;
-}
-
-.money.expense{
-    color: #c02c1b;
-}
-
-.form-control{
-    margin: 16px 0;
-}
-
-.label-income{
-    color: #2ecc71;
-}
-
-.label-expense{
-    color: #c0392b;
-}
-
-input{
-    display: block;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: solid 1px #dedede;
-    padding: 8px;
-    width: 100%;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
-
-input:focus, .btn:focus, .delete-btn:focus{
-    outline: none;
-}
-
-.btn{
-    cursor: pointer;
-    background-color: #0B6496;
-    box-shadow: var(--box-shadow);
-    display: block;
-    border: 0;
-    font-size: 1rem;
-    margin: 24px 0 32px;
-    padding: 10px 24px;
-    border-radius: 16px;
-    color: #ffffff;
-}
-
-.btn:active{
-    transform: scale(0.96);
-}
-
-.hist{
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2.5rem;
-}
-
-.hist li{
-    border-radius: 8px;
-    color: #0B6496;
-    display: flex;
-    background-color: #ffffff;
-    box-shadow: var(--box-shadow);
-    justify-content: space-between;
-    position: relative;
-    padding: 8px;
-    margin: 8px 0;
-}
-
-.hist li.income{
-    border-right: 6px solid #2ecc71;
-}
-
-.hist li.expense{
-    border-right: 6px solid #c0392b;
-}
-
-.delete-btn{
-    cursor: pointer;
-    background-color: #e74c3c;
-    border: 0;
-    color: #ffffff;
-    font-size: 1.2rem;
-    line-height: 1rem;
-    padding: 6px 6px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-100%, -50%);
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
-}
-
-.hist li:hover .delete-btn{
+  .mobile-info {
     opacity: 1;
+  }
+
+  .budg-container {
+    margin: 0;
+  }
+
+  .container2 {
+    width: 360px;
+  }
+
+  .hist li:active, .hist li:focus .delete-btn {
+    opacity: 1;
+  }
+}
+@media (max-width: 400px) {
+  .main {
+    width: 320px;
+  }
+
+  .container2 {
+    width: 320px;
+  }
 }
 
-
-@media (max-width:600px) {
-    body{
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        padding: 24px;
-    }
-
-    .main{
-        padding-top: 16px;
-        width: 360px;
-        flex-grow: 0;
-    }
-
-    .mobile-info{
-        opacity: 1;
-    }
-
-    .budg-container{
-        margin: 0;
-    }
-
-    .container2{
-        width: 360px;
-    }
-
-    .hist li:active, .hist li:focus 
-    .delete-btn{
-        opacity: 1;
-    }
-}
-
-@media (max-width:400px){
-    .main{
-        width: 320px;
-    }
-
-    .container2{
-        width: 320px;
-    }
-}
+/*# sourceMappingURL=style.css.map */
