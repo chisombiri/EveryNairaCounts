@@ -1,4 +1,4 @@
-$box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25); 
+@import "_variables.scss";
 
 *{
     box-sizing: border-box;
@@ -17,6 +17,10 @@ body{
 
 .main{
     flex-grow: 0.4;
+    //mobile responsive
+    @media (max-width:400px){
+        width: 320px;
+    }
 }
 
 h1{
@@ -40,7 +44,7 @@ h3, h4, label{
 }
 
 .naira{
-    color: #2ecc71;
+    color: map-get($colors, main-green);
 }
 
 h4{
@@ -75,6 +79,10 @@ h4{
 
 .container2{
     width: 360px;
+    //mobile responsive
+    @media (max-width:400px){
+        width: 320px;
+    }
 }
 
 .money{
@@ -96,11 +104,11 @@ h4{
 }
 
 .label-income{
-    color: #2ecc71;
+    color: map-get($colors, main-green);
 }
 
 .label-expense{
-    color: #c0392b;
+    color: map-get($colors, main-red);
 }
 
 input{
@@ -133,10 +141,10 @@ input:focus, .btn:focus, .delete-btn:focus{
     padding: 10px 24px;
     border-radius: 16px;
     color: #ffffff;
-}
 
-.btn:active{
-    transform: scale(0.96);
+    &:active{
+        transform: scale(0.96);
+    }
 }
 
 .hist{
@@ -155,10 +163,10 @@ input:focus, .btn:focus, .delete-btn:focus{
         margin: 8px 0;
     }
     li.income{
-        border-right: 6px solid #2ecc71;
+        border-right: 6px solid map-get($colors, main-green);
     }
     li.expense{
-        border-right: 6px solid #c0392b;
+        border-right: 6px solid map-get($colors, main-red);
     }
     li:hover .delete-btn{
         opacity: 1;
@@ -215,12 +223,3 @@ input:focus, .btn:focus, .delete-btn:focus{
     }
 }
 
-@media (max-width:400px){
-    .main{
-        width: 320px;
-    }
-
-    .container2{
-        width: 320px;
-    }
-}

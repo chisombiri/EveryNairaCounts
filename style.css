@@ -16,6 +16,11 @@ body {
 .main {
   flex-grow: 0.4;
 }
+@media (max-width: 400px) {
+  .main {
+    width: 320px;
+  }
+}
 
 h1 {
   letter-spacing: 1px;
@@ -71,6 +76,11 @@ h4 {
 
 .container2 {
   width: 360px;
+}
+@media (max-width: 400px) {
+  .container2 {
+    width: 320px;
+  }
 }
 
 .money {
@@ -130,7 +140,6 @@ input:focus, .btn:focus, .delete-btn:focus {
   border-radius: 16px;
   color: #ffffff;
 }
-
 .btn:active {
   transform: scale(0.96);
 }
@@ -206,15 +215,6 @@ input:focus, .btn:focus, .delete-btn:focus {
 
   .hist li:active, .hist li:focus .delete-btn {
     opacity: 1;
-  }
-}
-@media (max-width: 400px) {
-  .main {
-    width: 320px;
-  }
-
-  .container2 {
-    width: 320px;
   }
 }
 
